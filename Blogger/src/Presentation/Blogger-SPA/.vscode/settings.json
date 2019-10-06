@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/3be6b46b-e1cc-4a8d-a02f-ba0197f08312/resourceGroups/Autunna/providers/Microsoft.Web/sites/autunna",
+    "appService.deploySubpath": "dist\\Blogger-SPA"
+}

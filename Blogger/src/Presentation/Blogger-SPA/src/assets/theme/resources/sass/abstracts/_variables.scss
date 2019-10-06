@@ -1,0 +1,22 @@
+/* ------- Colors ------- */
+$primary-color: #00B9FB;
+$primary-text-color: #333333;
+$second-text-color: #999999;
+$third-text-color: #666666;
+$border-color: #E2E2E2;
+$input-border-color: #EBEBEB;
+$red-color: #E52005;
+
+/* ------- Font-Size ------- */
+$primary-font-size: 15px;
+$small-font-size: 14px;
+$large-font-size: 22px;
+
+/* ------- Elegant Icon Settings ------- */
+$ei-generate-classes: true;
+$ei-font-formats: eot woff ttf svg;
+
+//setup for bootstrap
+$theme-colors: (
+  primary: $primary-color
+);
