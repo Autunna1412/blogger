@@ -6,6 +6,7 @@ import { ArticleListComponent } from './article-list/article-list.component';
 import { CreateArticleComponent } from './create-article/create-article.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ArticleComponent } from './article-form/article.component';
+import { AngularEditorModule, AngularEditorService } from '@kolkov/angular-editor';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { ArticleComponent } from './article-form/article.component';
     FormsModule,
     ReactiveFormsModule,
     ArticleRoutingModule,
-    NgbModule
-  ]
+    NgbModule,
+    AngularEditorModule
+  ],
+  providers: [],
 })
 export class ArticleModule { }

@@ -1,24 +1,26 @@
-<div class="modal-header">
-    <h4 class="modal-title">Hi there!</h4>
+<div class="s-create">
+  <div class="modal-header">
+    <h4 class="modal-title red">Create</h4>
     <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    <form novalidate [formGroup]="articleForm" (ngSubmit)="createArticle(articleForm)">
-        <div class="form-group">
-            <input class="form-control" 
-                placeholder="Test" 
-                formControlName="name"/>
-        </div>
-        <div class="form-group">
-            <input class="form-control" 
-                placeholder="Test" 
-                formControlName="description"/>
-        </div>
-        <div class="modal-footer">
+    <form class="form" novalidate [formGroup]="articleForm" (ngSubmit)="createArticle(articleForm)">
+      <div class="form-group">
+        <input class="form-control form__title" placeholder="Title" formControlName="name"/>
+      </div>
+      <div class="form-group">
+        <angular-editor class="form-control form__editor" formControlName="description" placeholder="Your text here" [config]="editorConfig"></angular-editor>
+        <!-- <input class="form-control form__editor" placeholder="Your text here" formControlName="description" /> -->
+      </div>
+      <div class="form-group">
+        <input class="form-control form__tag" placeholder="#tags" formControlName="description" />
+      </div>
+      <div class="modal-footer">
         <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
         <button type="submit" class="btn btn-outline-dark">Submit</button>
-    </div>
+      </div>
     </form>
   </div>
+</div>

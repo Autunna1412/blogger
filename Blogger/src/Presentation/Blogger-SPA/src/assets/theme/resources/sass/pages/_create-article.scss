@@ -1,3 +1,23 @@
 .s-create {
-  padding-top: 6.4rem;
+  .form {
+    &__title {
+      font-weight: 400 !important;
+      font-size: 36px !important;
+      line-height: 47px !important;
+      border: none;
+    }
+
+    &__editor {
+      line-height: 21px !important;
+      word-wrap: break-word !important;
+      display: inline-block  !important;
+      line-height: 47px !important;
+      border: none;
+      color: red;
+    }
+
+    &__tag {
+      border: none;
+    }
+  }
 }
