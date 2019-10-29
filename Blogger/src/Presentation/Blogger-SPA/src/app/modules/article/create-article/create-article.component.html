@@ -8,14 +8,14 @@
   <div class="modal-body">
     <form class="form" novalidate [formGroup]="articleForm" (ngSubmit)="createArticle(articleForm)">
       <div class="form-group">
-        <input class="form-control form__title" placeholder="Title" formControlName="name"/>
+        <input class="form-control form__title" placeholder="Title" formControlName="title"/>
       </div>
       <div class="form-group">
-        <angular-editor class="form-control form__editor" formControlName="description" placeholder="Your text here" [config]="editorConfig"></angular-editor>
-        <!-- <input class="form-control form__editor" placeholder="Your text here" formControlName="description" /> -->
+        <!-- <angular-editor class="form-control form__editor" formControlName="description" placeholder="Your text here" [config]="editorConfig"></angular-editor> -->
+        <input class="form-control form__editor" placeholder="Your text here" formControlName="content" />
       </div>
       <div class="form-group">
-        <input class="form-control form__tag" placeholder="#tags" formControlName="description" />
+        <input class="form-control form__tag" placeholder="#tags" formControlName="tag" />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>

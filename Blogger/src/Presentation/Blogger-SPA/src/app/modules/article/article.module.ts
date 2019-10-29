@@ -7,6 +7,7 @@ import { CreateArticleComponent } from './create-article/create-article.componen
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ArticleComponent } from './article-form/article.component';
 import { AngularEditorModule, AngularEditorService } from '@kolkov/angular-editor';
+import { ArticleApi } from 'src/app/core/article.api.service';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,8 @@ import { AngularEditorModule, AngularEditorService } from '@kolkov/angular-edito
     NgbModule,
     AngularEditorModule
   ],
-  providers: [],
+  providers: [
+    ArticleApi
+  ],
 })
 export class ArticleModule { }

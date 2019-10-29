@@ -10,7 +10,7 @@ namespace Blogger.Core.Application.Dtos
     public class ArticleDto
     {
         public string Title { get; set; }
-        public string Description { get; set; }
+        public string Content { get; set; }
         public List<string> ImageUrl { get; set; }
         public string VideoUrl { get; set; }
         public int CategoryId { get; set; }

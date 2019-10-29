@@ -13,7 +13,7 @@ namespace Blogger.Core.Application.Mapper
         {
             CreateMap<Article, ArticleDto>()
                 .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title))
-                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Content, opt => opt.MapFrom(src => src.Content))
                 .ForMember(dest => dest.VideoUrl, opt => opt.MapFrom(src => src.VideoUrl))
                 .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.CategoryId))
                 .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.Type))
@@ -26,7 +26,7 @@ namespace Blogger.Core.Application.Mapper
 
             CreateMap<ArticleDto, Article>()
                 .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title))
-                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Content, opt => opt.MapFrom(src => src.Content))
                 .ForMember(dest => dest.VideoUrl, opt => opt.MapFrom(src => src.VideoUrl))
                 .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.CategoryId))
                 .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.Type))
