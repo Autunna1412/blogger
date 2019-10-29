@@ -8,6 +8,6 @@ export class ArticleApi extends Api {
     private controllerName = 'api/article';
 
     public create(data: any): Observable<any> {
-        return this.post(`${this.controllerName}`, data);
+        return this.post(`${this.controllerName}/create`, data);
     }
 }

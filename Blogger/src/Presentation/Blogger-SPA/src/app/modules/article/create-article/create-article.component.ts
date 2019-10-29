@@ -11,6 +11,7 @@ import { ArticleApi } from 'src/app/core/article.api.service';
 export class CreateArticleComponent implements OnInit {
 
   articleForm: FormGroup;
+  newArticle: any;
 
 //   editorConfig: AngularEditorConfig = {
 //     editable: true,
@@ -68,6 +69,10 @@ export class CreateArticleComponent implements OnInit {
   }
 
   createArticle(formGroup: FormGroup) {
-    console.log(formGroup);
+    this.newArticle = <any> formGroup.value;
+    this.articleApi.create(this.newArticle).subscribe(
+      res => console.log(res.status), 
+      err => console.log('error', err.status)
+    );
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { CreateArticleComponent } from 'src/app/modules/article/create-article/create-article.component';
 
 @Component({
@@ -7,13 +7,16 @@ import { CreateArticleComponent } from 'src/app/modules/article/create-article/c
   templateUrl: './header.component.html'
 })
 export class HeaderComponent implements OnInit {
-
+  ngbModalOptions: NgbModalOptions = {
+    backdrop : 'static',
+    keyboard : false
+  };
   constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
   }
 
   open() {
-    this.modalService.open(CreateArticleComponent);
+    this.modalService.open(CreateArticleComponent, this.ngbModalOptions);
   }
 }

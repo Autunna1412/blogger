@@ -28,6 +28,8 @@ namespace Blogger.Presentation.WebAPI.Controllers
                 return BadRequest();
             }
 
+            dto.CategoryId = 1;
+
             _articleService.CreateAsync(dto);
             return Ok();
         }
