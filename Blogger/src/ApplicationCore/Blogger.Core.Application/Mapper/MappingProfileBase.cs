@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
+using Blogger.Core.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Blogger.Infrastructure.Persistence.Models;
+
 
 namespace Blogger.Core.Application.Mapper
 {

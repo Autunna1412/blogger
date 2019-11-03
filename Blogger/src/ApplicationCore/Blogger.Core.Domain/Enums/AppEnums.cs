@@ -9,10 +9,9 @@ namespace Blogger.Core.Domain.Enums
         public enum ArticleType
         {
             Video = 10,
-            Music = 20,
             Audio = 30,
             Quote = 40,
-            Dispatch = 50
+            Image = 50
         }
     }
 }

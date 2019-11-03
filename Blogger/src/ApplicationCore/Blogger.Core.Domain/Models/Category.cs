@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Blogger.Infrastructure.Persistence.Models
+namespace Blogger.Core.Domain.Models
 {
     public class Category
     {

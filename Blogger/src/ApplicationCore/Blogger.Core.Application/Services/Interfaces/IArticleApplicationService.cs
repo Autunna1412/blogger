@@ -10,5 +10,6 @@ namespace Blogger.Core.Application.Services.Interfaces
     {
         void CreateAsync(ArticleDto dto);
         Task<ArticleDto> GetByIdAsync(int id);
+        Task<List<ArticleDto>> GetList();
     }
 }

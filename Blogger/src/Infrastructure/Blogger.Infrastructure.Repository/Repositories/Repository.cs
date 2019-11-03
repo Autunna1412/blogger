@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Blogger.Infrastructure.Persistence;
-using Blogger.Infrastructure.Persistence.Models;
+using Blogger.Core.Domain.Models;
 
 namespace Blogger.Infrastructure.Repository.Repositories
 {

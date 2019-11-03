@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Blogger.Infrastructure.Persistence.Models
+namespace Blogger.Core.Domain.Models
 {
     public abstract class BaseEntity
     {

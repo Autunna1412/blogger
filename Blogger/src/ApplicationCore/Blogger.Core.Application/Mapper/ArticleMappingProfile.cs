@@ -2,8 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Blogger.Infrastructure.Persistence.Models;
 using System.Linq;
+using Blogger.Core.Domain.Models;
 
 namespace Blogger.Core.Application.Mapper
 {
@@ -14,6 +14,7 @@ namespace Blogger.Core.Application.Mapper
             CreateMap<Article, ArticleDto>()
                 .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title))
                 .ForMember(dest => dest.Content, opt => opt.MapFrom(src => src.Content))
+                .ForMember(dest => dest.CreatedDate, opt => opt.MapFrom(src => src.CreatedDate))
                 .ForMember(dest => dest.VideoUrl, opt => opt.MapFrom(src => src.VideoUrl))
                 .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.CategoryId))
                 .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.Type))

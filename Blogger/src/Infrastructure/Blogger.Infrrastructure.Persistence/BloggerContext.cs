@@ -1,4 +1,4 @@
-﻿using Blogger.Infrastructure.Persistence.Models;
+﻿using Blogger.Core.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Blogger.Infrastructure.Persistence

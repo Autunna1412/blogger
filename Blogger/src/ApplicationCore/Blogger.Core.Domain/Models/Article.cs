@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Blogger.Core.Domain.Enums;
 
-namespace Blogger.Infrastructure.Persistence.Models
+namespace Blogger.Core.Domain.Models
 {
     public class Article : BaseEntity
     {

@@ -1,4 +1,6 @@
-﻿using Blogger.Core.Application.Services;
+﻿using Blogger.Core.Application.Queries;
+using Blogger.Core.Application.Queries.Interfaces;
+using Blogger.Core.Application.Services;
 using Blogger.Core.Application.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -11,8 +13,12 @@ namespace Blogger.Core.Application.Extensions
     {
         public static IServiceCollection AddApplicationService(this IServiceCollection services)
         {
+            //Application Services
             services.AddScoped<IArticleApplicationService, ArticleApplicationService>();
-       
+
+            //Query Services
+            services.AddScoped<IArticleQueryService, ArticleQueryService>();
+
             return services;
         }
     }

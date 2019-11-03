@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Blogger.Infrastructure.Persistence;
-using Blogger.Infrastructure.Persistence.Models;
+using Blogger.Core.Domain.Models;
 
 namespace Blogger.Infrastructure.Repository.Repositories
 {

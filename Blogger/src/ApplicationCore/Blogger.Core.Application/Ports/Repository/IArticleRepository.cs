@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Blogger.Core.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Blogger.Infrastructure.Persistence.Models;
 
 namespace Blogger.Core.Application.Ports.Repository
 {
