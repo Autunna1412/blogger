@@ -10,4 +10,8 @@ export class ArticleApi extends Api {
     public create(data: any): Observable<any> {
         return this.post(`${this.controllerName}/create`, data);
     }
+
+    public getAritcles(): Observable<any> {
+        return this.get(`${this.controllerName}/get/list`);
+    }
 }

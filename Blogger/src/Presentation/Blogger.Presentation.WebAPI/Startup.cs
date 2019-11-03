@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using AutoMapper;
 using Blogger.Infrastructure.Persistence.Extensions;
 using Microsoft.Extensions.DependencyInjection;
+using Blogger.Core.Application.Mapper;
 
 namespace Blogger.Presentation.WebAPI
 {
@@ -54,7 +55,15 @@ namespace Blogger.Presentation.WebAPI
             // Third-parties
             services.AddUnitOfWork();
             services.AddRepository();
-            services.AddAutoMapper();
+            // Auto Mapper Configurations
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new ArticleMappingProfile());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+
+            services.AddSingleton(mapper);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
