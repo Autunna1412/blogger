@@ -1,7 +1,7 @@
 <section class="a-content">
     <div class="container">
         <div class="card-columns">
-            <app-article></app-article>
+            <app-article *ngIf="articles" [articleList]="articles"></app-article>
         </div>
     </div>
 </section>

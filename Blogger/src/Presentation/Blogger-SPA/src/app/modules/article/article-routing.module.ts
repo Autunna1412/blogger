@@ -14,7 +14,8 @@ const routes: Routes = [
       {
         path: 'create', component: CreateArticleComponent
       }
-    ]
+    ],
+    runGuardsAndResolvers: 'always'
   }
 ];
 

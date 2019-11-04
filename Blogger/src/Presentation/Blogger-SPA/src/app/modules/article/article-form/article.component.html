@@ -1,66 +1,65 @@
-<article class="card">
-    <img class="card-img-top img-fluid" src="https://www.telegraph.co.uk/content/dam/Travel/2019/February/wat.jpg?imwidth=1400"
-        alt="Card image top">
-    <div class="card-body">
-        <div class="custom-card-header">
-            <div class="card-custom-header__date">
-                <a href="single-standard.html">December 15, 2017</a>
+<div *ngFor="let article of articleList">
+    <article class="card" *ngIf="article.typeName === 'Image'">
+        <img class="card-img-top img-fluid" src="https://via.placeholder.com/500"
+            alt="Card image top">
+        <div class="card-body">
+            <div class="custom-card-header">
+                <div class="card-custom-header__date">
+                    <a href="single-standard.html">{{article.createdDate | date}}</a>
+                </div>
+                <h1 class="card-title card-custom-header__title">
+                    <a href="single-standard.html">{{article.title}}</a>
+                </h1>
             </div>
-            <h1 class="card-title card-custom-header__title">
-                <a href="single-standard.html">Just a Standard Format Post. </a>
-            </h1>
-        </div>
-        <div class="card-body__excerpt">
-            <p>
-                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est
-                ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
-
-            </p>
-        </div>
-        <div class="card-body__meta">
-            <span class="card-body__meta-links">
-                <a href="category.html">Design</a>
-                <a href="category.html">Photography</a>
-            </span>
-        </div>
-    </div>
-</article>
-
-<!-- #1-->
-<article class="card">
-    <img class="card-img-top img-fluid" src="https://travel.com.vn/Images/tour/tfd_180709040735_039976.jpg" alt="Card image top">
-    <div class="card-body">
-        <div class="custom-card-header">
-            <div class="card-custom-header__date">
-                <a href="single-standard.html">December 15, 2017</a>
+            <div class="card-body__excerpt">
+                <p>
+                    {{article.content}}
+                </p>
             </div>
-            <h1 class="card-title card-custom-header__title">
-                <a href="single-standard.html">Just a Standard Format Post. </a>
-            </h1>
+            <div class="card-body__meta">
+                <span class="card-body__meta-links" *ngFor="let hashtag of article.hashtags">
+                    <a href="category.html">{{hashtag}}</a>
+                </span>
+            </div>
         </div>
-        <div class="card-body__excerpt">
-            <p>
-                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est
-                ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
-            </p>
+    </article>
+    
+    <!-- #2-->
+    <article class="card format-quote" *ngIf="article.Image === 'Quote'">
+        <div class="entry__thumb">
+            <blockquote>
+                <p>Good design is making something intelligible and memorable. Great design is making something memorable
+                    and meaningful.</p>
+    
+                <cite>Dieter Rams</cite>
+            </blockquote>
         </div>
-        <div class="card-body__meta">
-            <span class="card-body__meta-links">
-                <a href="category.html">Design</a>
-                <a href="category.html">Photography</a>
-            </span>
-        </div>
-    </div>
-</article>
+    </article>
+</div>
 
-<!-- #2-->
-<article class="card format-quote">
-    <div class="entry__thumb">
-        <blockquote>
-            <p>Good design is making something intelligible and memorable. Great design is making something memorable
-                and meaningful.</p>
-
-            <cite>Dieter Rams</cite>
-        </blockquote>
-    </div>
-</article>
+<!--   
+    <article class="card">
+        <img class="card-img-top img-fluid" src="https://travel.com.vn/Images/tour/tfd_180709040735_039976.jpg" alt="Card image top">
+        <div class="card-body">
+            <div class="custom-card-header">
+                <div class="card-custom-header__date">
+                    <a href="single-standard.html">December 15, 2017</a>
+                </div>
+                <h1 class="card-title card-custom-header__title">
+                    <a href="single-standard.html">Just a Standard Format Post. </a>
+                </h1>
+            </div>
+            <div class="card-body__excerpt">
+                <p>
+                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est
+                    ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                </p>
+            </div>
+            <div class="card-body__meta">
+                <span class="card-body__meta-links">
+                    <a href="category.html">Design</a>
+                    <a href="category.html">Photography</a>
+                </span>
+            </div>
+        </div>
+    </article> -->

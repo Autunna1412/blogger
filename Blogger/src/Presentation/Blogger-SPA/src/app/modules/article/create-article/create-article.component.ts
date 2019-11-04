@@ -3,6 +3,10 @@ import { NgbModalConfig, NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-boots
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { ArticleApi } from 'src/app/core/article.api.service';
+import { ToastrService } from 'ngx-toastr';
+import { Router, ActivatedRouteSnapshot, NavigationEnd } from '@angular/router';
+import { Pipe, PipeTransform } from '@angular/core';
+
 
 @Component({
   selector: 'app-create-article',
@@ -55,9 +59,13 @@ export class CreateArticleComponent implements OnInit {
 // };
 
   constructor(public activeModal: NgbActiveModal,
+    private toastr: ToastrService,
     private formBuilder: FormBuilder,
-    private articleApi: ArticleApi) {
-
+    private articleApi: ArticleApi,
+    private router: Router) {
+      this.router.routeReuseStrategy.shouldReuseRoute = function() {
+        return false;
+      };
   }
 
   ngOnInit() {
@@ -71,8 +79,20 @@ export class CreateArticleComponent implements OnInit {
   createArticle(formGroup: FormGroup) {
     this.newArticle = <any> formGroup.value;
     this.articleApi.create(this.newArticle).subscribe(
-      res => console.log(res.status), 
-      err => console.log('error', err.status)
+      res => {
+        this.toastr.success('Save Successfully!', 'Toastr fun!');
+        this.activeModal.close('Close click');
+        this.redirectTo(this.router.url);
+      },
+      err => {
+        this.toastr.error('Error!', 'Toastr fun!');
+        console.log('oops', err);
+      }
     );
+  }
+
+  redirectTo(uri) {
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() =>
+    this.router.navigate([uri]));
   }
 }
