@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './layout/header/header.component';
 import { ToastrModule } from 'ngx-toastr';
+import { TagInputModule } from 'ngx-chips';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [

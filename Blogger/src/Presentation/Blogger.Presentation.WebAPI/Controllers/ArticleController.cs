@@ -32,7 +32,6 @@ namespace Blogger.Presentation.WebAPI.Controllers
             dto.CategoryId = 1;
             dto.Type = ArticleType.Image;
             dto.ImageUrl.Add("https://www.telegraph.co.uk/content/dam/Travel/2019/February/wat.jpg?imwidth=1400");
-            dto.Hashtags.Add("Photography");
             _articleService.CreateAsync(dto);
             return Ok();
         }

@@ -17,9 +17,11 @@
                 </p>
             </div>
             <div class="card-body__meta">
-                <span class="card-body__meta-links" *ngFor="let hashtag of article.hashtags">
-                    <a href="category.html">{{hashtag}}</a>
-                </span>
+                <a *ngFor="let hashtag of article.hashtags" 
+                    class="card-body__meta-links" 
+                    href="category.html">
+                    {{hashtag}}
+                </a>
             </div>
         </div>
     </article>

@@ -7,7 +7,8 @@ import { CreateArticleComponent } from './create-article/create-article.componen
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ArticleComponent } from './article-form/article.component';
 import { AngularEditorModule, AngularEditorService } from '@kolkov/angular-editor';
-import { ArticleApi } from 'src/app/core/article.api.service';
+import { ArticleApi } from '../../core/article.api.service';
+import { TagInputModule } from 'ngx-chips';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ArticleApi } from 'src/app/core/article.api.service';
     ReactiveFormsModule,
     ArticleRoutingModule,
     NgbModule,
+    TagInputModule,
     AngularEditorModule
   ],
   providers: [

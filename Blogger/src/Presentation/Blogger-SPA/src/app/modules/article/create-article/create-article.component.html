@@ -6,7 +6,7 @@
     </button>
   </div>
   <div class="modal-body">
-    <form class="form" novalidate [formGroup]="articleForm" (ngSubmit)="createArticle(articleForm)">
+    <form class="form" novalidate [formGroup]="articleForm"  (ngSubmit)="createArticle(articleForm)">
       <div class="form-group">
         <input class="form-control form__title" placeholder="Title" formControlName="title"/>
       </div>
@@ -15,12 +15,12 @@
         <input class="form-control form__editor" placeholder="Your text here" formControlName="content" />
       </div>
       <div class="form-group">
-        <input class="form-control form__tag" placeholder="#tags" formControlName="tag" />
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
-        <button type="submit" class="btn btn-outline-dark">Submit</button>
+        <tag-input theme='bootstrap' class="form-control form__tag" formControlName="hashtags"  placeholder="#tags"></tag-input>
       </div>
     </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+    <button type="submit" class="btn btn-outline-dark">Submit</button>
   </div>
 </div>

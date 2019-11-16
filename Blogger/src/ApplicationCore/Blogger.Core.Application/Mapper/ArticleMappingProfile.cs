@@ -39,7 +39,7 @@ namespace Blogger.Core.Application.Mapper
                 .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src =>
                     (src.ImageUrl == null || !src.ImageUrl.Any())
                         ? string.Empty
-                        : String.Join(';', src.Hashtags.Select(x => x))
+                        : String.Join(';', src.ImageUrl.Select(x => x))
                 ));
         }
     }
