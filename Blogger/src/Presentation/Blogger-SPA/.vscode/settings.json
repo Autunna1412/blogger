@@ -1,4 +1,8 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/3be6b46b-e1cc-4a8d-a02f-ba0197f08312/resourceGroups/Autunna/providers/Microsoft.Web/sites/autunna",
-    "appService.deploySubpath": "dist\\Blogger-SPA"
+    "appService.deploySubpath": "",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/68d173ef-8a54-43e3-84db-267caf5c08d9/resourceGroups/autunna811-blogger/providers/Microsoft.Web/sites/autunna811-blogger"
 }

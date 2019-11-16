@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'https://localhost:44370',
+  apiBaseUrl: 'https://autunna811.azurewebsites.net',
 };
 
 /*
